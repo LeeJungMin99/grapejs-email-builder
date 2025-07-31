@@ -1,0 +1,43 @@
+1. Git 초기화 (프로젝트 폴더에서 한 번만)
+bash
+복사
+편집
+cd your-project-folder
+git init
+✅ 2. GitHub에 새 저장소 만들기
+https://github.com 접속
+
+오른쪽 상단 "➕" → New repository
+
+저장소 이름 입력 (예: grapesjs-email-builder)
+
+Create repository 클릭
+
+✅ 3. 원격 저장소 연결
+GitHub에서 생성한 저장소 주소 복사 후, 터미널에서:
+
+bash
+복사
+편집
+git remote add origin https://github.com/your-username/grapesjs-email-builder.git
+✅ 4. 커밋 및 푸시
+bash
+복사
+편집
+git add .
+git commit -m "Initial commit"
+git branch -M main
+git push -u origin main
+✅ 5. .gitignore 설정 추천 (Vite + Node 환경)
+your-project-folder/.gitignore 파일 생성 후 다음 내용 추가:
+
+bash
+복사
+편집
+node_modules
+dist
+.env
+.DS_Store
+필요하면 .env 파일도 Git에 올리지 않도록 .gitignore에 추가해 주세요.
+
+원하시면 push 이후 GitHub Pages 배포도 도와드릴 수 있어요.
